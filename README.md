@@ -50,36 +50,6 @@ The table below outlines the specific regional entities utilized as structural e
 | Sharqia | Sharqia, Zaqaziq, Bilbis, Abu Hammad, Minya al-Qamh, Faqus |
 
 ------------------------------
-## ⚙️ Implementation Example
-Below are example code blocks demonstrating how these geographic profiles are structured and randomly sampled within the synthetic data engine.
-## 1. Data Schema Definition (JSON)
-
-{
-  "governorates": {
-    "Suhag": ["Suhag", "Akhmim", "Girga", "Tahta", "Markz Al Monshah", "Markz Mallawi", "Markz Maghagha", "Markz Bani Mazar", "Markz Samalut", "Markz Abu Qurgas", "Markz Dir Mawas"],
-    "Assuit": ["Assuit", "Manfalut", "Abnub", "Dayrout", "Al-Qusia"],
-    "Sharqia": ["Sharqia", "Zaqaziq", "Bilbis", "Abu Hammad", "Minya al-Qamh", "Faqus"]
-  }
-}
-
-## 2. Dynamic Sampling Script (Python)
-
-import random
-# Geographic dataset baselinegeo_data = {
-    "Suhag": ["Suhag", "Akhmim", "Girga", "Tahta", "Markz Al Monshah"],
-    "Assuit": ["Assuit", "Manfalut", "Abnub", "Dayrout", "Al-Qusia"],
-    "Sharqia": ["Sharqia", "Zaqaziq", "Bilbis", "Abu Hammad", "Minya al-Qamh", "Faqus"]
-}
-def generate_synthetic_location():
-    # Randomly select a governorate
-    gov = random.choice(list(geo_data.keys()))
-    # Randomly select a corresponding markaz
-    markaz = random.choice(geo_data[gov])
-    return {"governorate": gov, "markaz": markaz}
-# Generate a sample record
-print(generate_synthetic_location())# Output example: {'governorate': 'Assuit', 'markaz': 'Manfalut'}
-
-
 
 
 ---
