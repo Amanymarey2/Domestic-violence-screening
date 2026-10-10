@@ -56,7 +56,7 @@ The table below outlines the specific regional entities utilized as structural e
 ## ⚙️ Data Engineering & Pipeline Workflow
 
 ```unset
-[ Data Generation (OpenAI) ] ➔ [ SQLite Relational DB ] ➔ [ 180-Day Rolling Windows ]
+[ SQLite Relational DB ] ➔ [Data Generation (OpenAI) ] ➔ [ 180-Day Rolling Windows ]
                                                                        │
 [ Power BI Decision Support ] 📍 [ Stacked ML Prediction ] 🩻 [ Text Regularization ]
 ```
