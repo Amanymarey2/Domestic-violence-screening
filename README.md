@@ -60,16 +60,16 @@ The table below outlines the specific regional entities utilized as structural e
                                                                        │
 [ Power BI Decision Support ] 📍 [ Stacked ML Prediction ] 🩻 [ Text Regularization ]
 ```
+### 1. Relational Modeling (`db_creation.py`, `schema.sql`)
+The database normalizes information across 4 connected layers to enforce structural integrity:
+$$\text{Facilities} \longrightarrow \text{Households} \longrightarrow \text{Individuals} \longrightarrow \text{Visits}$$
+It also logs concurrent socio-economic shocks (*Divorce, Orphaned, Partner Migration*) within a standalone `life_events` ledger.
 
-### 1. Adversarial Synthetic Data Generation (`synthetic_data_openai.py`)
+### 2. Adversarial Synthetic Data Generation (`synthetic_data_openai.py`)
 To emulate realistic Egyptian EHR clinic logs without compromising actual patient privacy, data was synthesized across ~7,000 clinic charts using `gpt-4o-mini` with strict behavioral prompts:
 * **Dynamic Context Injection:** To prevent the model from falling into a "vocabulary loop" where it memorizes simple templates, the script injects randomized non-abuse primary care complaints (e.g., *acute back pain from agricultural work, cold and flu, routine diabetic prescription renewals*) directly into baseline records.
 * **Anti-Boilerplate Constraints:** Forbids standard LLM shortcut markers (*كل حاجة تمام, لا شكاوى*). It forces the AI to open with shuffled clinical shorthand variations (`مريض جاي بـ`, `العيان جالي الوحدة يشكي من`) to accurately mimic a busy clinic environment.
 
-### 2. Relational Modeling (`db_creation.py`, `schema.sql`)
-The database normalizes information across 4 connected layers to enforce structural integrity:
-$$\text{Facilities} \longrightarrow \text{Households} \longrightarrow \text{Individuals} \longrightarrow \text{Visits}$$
-It also logs concurrent socio-economic shocks (*Divorce, Orphaned, Partner Migration*) within a standalone `life_events` ledger.
 
 ### 3. Feature Preprocessing & Engineering (`data_prep_model.py`)
 * **Text Regularization:** Cleans Arabic text fields and drops clinical false-positive traps. For instance, it isolates lookahead strings matching heartbeats (`ضربات\s*(الـ?|بـ?)?قلب`) so the system doesn't confuse a normal pulse reading with references to physical blunt trauma (*blows/strikes*).
