@@ -1,5 +1,5 @@
 # Domestic-violence-screening
-# 🇪🇬 Egypt UHIS Early Warning System (EWS): Multi-Modal Vulnerability & Domestic Violence Screening
+# Egypt UHIS Early Warning System (EWS): Multi-Modal Vulnerability & Domestic Violence Screening
 
 [![Python Version](https://shields.io)](https://python.org)
 [![ML Framework](https://shields.io)](https://scikit-learn.org)
@@ -106,7 +106,7 @@ Extracting the model's coefficients shows that it bypasses generic clinical form
 
 ### 🎥 Dashboard Figures
 
-**Page**
+**Page 1**
 ![image](https://github.com/Amanymarey2/Domestic-violence-screening/blob/main/page1%20dashboard.png)
 
 **Page 2**
