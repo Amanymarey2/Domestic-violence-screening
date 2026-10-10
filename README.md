@@ -117,6 +117,26 @@ Extracting the model's coefficients shows that it bypasses generic clinical form
 
 ---
 
+### 🔬 Production Inference Testing (Real-Time EWS Scoring)
+
+To validate the deployment readiness of the stacked pipeline, a single-visit simulation script (`predict_single_visit.py`) was executed using a raw, unstructured mixed-dialect clinical note. This test demonstrates how the dual-tier engine handles real-time risk scoring at the clinic workstation level.
+
+#### Test Payload Input:
+*   **Raw Medical Note:** `"العيانة جت عندها كدمات زرقا في دراعها، وبتقول وقعت من السرير بس التاريخ مش راكب مع شكل الإصابة."`
+*   **Structured Metadata:** `prev_injury_count_6m = 2` (Historical Velocity) | `days_since_injury = 1` (Acute Trauma Window)
+
+#### Execution Output:
+```unset
+=== TESTING CASUAL CLINIC VISIT DATA PROFILE ===
+Cleaned Text Focus            : العيانة جت عندها كدمات زرقا في دراعها، وبتقول وقعت من السرير بس التاريخ مش راكب مع شكل الإصابة.
+Isolated Text Risk Score      : 0.8776
+Unified Multi-Modal Risk Score: 0.5314
+Assigned Action Tier          : High
+```
+
+
+---
+
 ## 📊 Analytics & Decision Support Dashboard (`domestic violence screening.pbix`)
 
 `data_prep_powerbi.py` joins model predictions back to regional coordinates to fuel an executive **Power BI Decision Support Dashboard** designed for social welfare resource planning.
