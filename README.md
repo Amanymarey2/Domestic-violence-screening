@@ -106,8 +106,11 @@ Extracting the model's coefficients shows that it bypasses generic clinical form
 
 ### 🎥 Dashboard Figures
 
+**Page**
+![image](https://github.com/Amanymarey2/Domestic-violence-screening/blob/main/page1%20dashboard.png)
+
 **Page 2**
-page 2 dashboard.png
+![image](https://github.com/Amanymarey2/Domestic-violence-screening/blob/main/page1%20dashboard.png)
 
 ### 🎛️ Global Slicers & Banner KPIs
 Every page features global slicers for **Governorate**, **Markaz**, and **Date Range**, displaying three real-time KPI metrics:
