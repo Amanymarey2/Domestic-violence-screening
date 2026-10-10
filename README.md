@@ -147,7 +147,7 @@ Assigned Action Tier          : High
 ![image](https://github.com/Amanymarey2/Domestic-violence-screening/blob/main/page1%20dashboard.png)
 
 **Page 2**
-![image](https://github.com/Amanymarey2/Domestic-violence-screening/blob/main/page1%20dashboard.png)
+![image](https://github.com/Amanymarey2/Domestic-violence-screening/blob/main/page%202%20dashboard.png)
 
 ### 🎛️ Global Slicers & Banner KPIs
 Every page features global slicers for **Governorate**, **Markaz**, and **Date Range**, displaying three real-time KPI metrics:
