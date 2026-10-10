@@ -104,11 +104,10 @@ Extracting the model's coefficients shows that it bypasses generic clinical form
 
 `data_prep_powerbi.py` joins model predictions back to regional coordinates to fuel an executive **Power BI Decision Support Dashboard** designed for social welfare resource planning.
 
-### 🎥 Dashboard Walkthrough Video
-*(Insert your screen recording link or GIF here)*
-```unset
-[ Click here to play the interactive video demonstration of the dashboard interface ]
-```
+### 🎥 Dashboard Figures
+
+**Page 2**
+page 2 dashboard.png
 
 ### 🎛️ Global Slicers & Banner KPIs
 Every page features global slicers for **Governorate**, **Markaz**, and **Date Range**, displaying three real-time KPI metrics:
